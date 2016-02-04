@@ -145,7 +145,7 @@ liukang@LIUKANG-PC /D/Ruby21-x64/Devkit
 $ jekyll -version
 jekyll 2.5.3
 ```
-4. 进到jekyll工程目录中, 启动本地服务: 
+进到jekyll工程目录中, 启动本地服务: 
 
 ```
 liukang@LIUKANG-PC /F/GitHub/liukang325.github.io (master)
