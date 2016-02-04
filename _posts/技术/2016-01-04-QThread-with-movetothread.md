@@ -37,6 +37,7 @@ signals:
 ```
 connect()的第五个参数
 有六种：
+
 1. Qt::AutoConnection
 2. Qt::DirectConnection
 3. Qt::QueuedConnection
