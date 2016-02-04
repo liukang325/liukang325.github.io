@@ -2,7 +2,7 @@
 layout: post
 title: Python之路
 category: 生活
-tags: 总结
+tags: 生活
 keywords: 
 description: 
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Windows下搭建本地jakyll调试环境
+title: Windows下搭建本地jekyll调试环境
 category: 技术
 tags: jekyll
 keywords: 
