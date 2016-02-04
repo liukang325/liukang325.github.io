@@ -29,15 +29,14 @@ ga:
 
 # disqus 设置
 disqus:
-  shortname: painterlin
+  shortname: liukang325
 
 # 主题设置，自动激活某个标签
 active: 技术
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Optimization
-  - LaTeX
+  - Markdown
 
 # 中文本地化
 locals:
