@@ -1,0 +1,520 @@
+
+<!DOCTYPE HTML>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<title>2016猴年最最最早的祝福送给您！</title>
+<link href="http://att.569.com/countdown/css/base.css" rel="stylesheet" type="text/css">
+<link href="http://att.569.com/countdown/css/animation.css" rel="stylesheet" type="text/css">
+<link href="http://att.569.com/countdown/css/w1.css" rel="stylesheet" type="text/css">
+<link href="http://att.569.com/common/css/zs.css" rel="stylesheet" type="text/css">
+<script src="http://att.569.com/countdown/js/countdown_djs.js" type="text/javascript"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://att.569.com/common/js/jquery.min.js" type="text/javascript"></script>
+<SCRIPT type="text/javascript">
+String.prototype.replaceAll = function(s1,s2) { 
+    return this.replace(new RegExp(s1,"gm"),s2); 
+}
+function trim(str){ 
+　　return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function QueryString(item){
+var sValue=location.search.match(new RegExp("[\?\&]"+item+"=([^\&]*)(\&?)","i"))
+return sValue?sValue[1]:sValue
+}
+var dusername="刘康";
+var lusername=QueryString("stra");
+
+if(lusername){
+	lusername=lusername.replaceAll("_","%");
+	//lusername=lusername.replaceAll("%21","%");
+	lusername=unescape(lusername);
+	if(!lusername){
+		lusername=dusername;
+	}
+}else{
+	lusername=dusername;
+}
+
+function check(){
+	obj = trim(document.getElementById("stra").value);
+	if(unescape(obj)=='您的名字') obj = dusername; 
+	if (obj.length>24) {
+		alert('太长'); 
+		return false;
+	}
+	if (obj.length==0) {
+		alert('还没填姓名呀!'); 
+		return false;
+	}
+	obj=escape(obj).replaceAll("%","_");
+	var url="http://www.3875.com/countdown/?stra="+obj;
+	window.location.replace(url);
+	return false
+}
+
+mp = 'mp';
+	m='mp';
+
+$(document).ready(function(){
+	$.ajax({
+		url:"http://wxapi2.569.com/jssdk.php",
+		type: "GET",
+		async: true,
+		dataType: "jsonp",
+		jsonpCallback:"flightHandler",
+		data:{url1:location.href.split('#')[0]},
+		success: function(json){
+			wx.config({
+				appId: json.appId,
+				timestamp:json.timestamp,
+				nonceStr: json.nonceStr,
+				signature:json.signature,
+				jsApiList: [
+					// 所有要调用的 API 都要加到这个列表中
+					'checkJsApi',
+					'onMenuShareTimeline',
+					'onMenuShareAppMessage',
+					'onMenuShareQQ',
+					'onMenuShareWeibo',
+					]
+			});
+			wx.ready(function(){
+			});		  
+		},
+		error: function(){
+        	alert("fail");
+        }
+	});
+});
+
+  r='redir';
+  r1='ect';
+  r=r+r1;
+
+sharename = escape(lusername).replaceAll("%","!");
+
+</SCRIPT>
+<style type="text/css">
+.updown1 {
+	-webkit-transform: translate3d(0px, 6px, 0px);
+	-webkit-animation: updown1 1s 0s infinite linear alternate both ;
+}
+
+@-webkit-keyframes updown1 {
+	0% {
+		-webkit-transform: translate3d(0px, -20px, 0px);
+		-webkit-animation-timing-function:linear;
+	}
+	100% {
+		-webkit-transform: translate3d(0px, 15px, 0px);
+		-webkit-animation-timing-function:ease-in-out;
+	}
+}
+.moveleft{
+		-webkit-animation-name: 'moveleft'; /*动画名称*/
+      -webkit-animation-duration: 6s;/*播放一次所持续时间*/
+      -webkit-animation-timing-function: ease-in-out;/*动画播放频率*/
+      -webkit-animation-iteration-count: 10;/*动画播放次涒为无限次*/
+}
+.moveright{
+	-webkit-animation-name: 'moveright'; /*动画名称*/
+      -webkit-animation-duration: 6s;/*播放一次所持续时间*/
+      -webkit-animation-timing-function: ease-in-out;/*动画播放频率*/
+	  /*-webkit-animation-delay:1s;*/
+      -webkit-animation-iteration-count: 8;/*动画播放次涒为无限次*/
+}
+.moveright1{-webkit-animation:moveright 6s ease-in-out 0s 1}
+@-webkit-keyframes 'moveleft' {
+  from{
+	   -webkit-transform: translate(-350px,0);
+     }
+  50%{
+	 -webkit-transform: translate(0,0);
+  }
+  to {
+	 -webkit-transform: translate(380px,0);
+  }
+}
+
+@-webkit-keyframes 'moveright' {
+  from{
+	   -webkit-transform: translate(350px,0);
+     }
+  50%{
+	 -webkit-transform: translate(0,0);
+  }
+  to {
+	 -webkit-transform: translate(-380px,0);
+  }
+}
+@-webkit-keyframes up{
+	from{-webkit-transform:translate(0px,0px) rotate(0deg);opacity:0.9}
+	to{-webkit-transform:translate(-160px,-600px) rotate(10deg);opacity:0.9}
+}
+@-webkit-keyframes down{
+	from{-webkit-transform:translate(0px,-160px) rotate(0deg);opacity:0.9}
+	to{-webkit-transform:translate(0px,0px) rotate(0deg);opacity:0.9}
+}
+
+.jump{-webkit-animation: jump 2s 2 ease-in-out;}
+
+/*定义跳动动画jump*/
+  @-webkit-keyframes 'jump' {
+  from{
+	   -webkit-transform: translate(0px,0);
+	   -webkit-transform:scale(0.8,0.8); 
+     }
+	50%{
+		-webkit-transform:scale(1.1,1.1); 
+	}
+	70%{
+		-webkit-transform: translate(0,-60px);
+	}
+
+  to {
+	 -webkit-transform: translate(0px,0);
+  }
+}
+
+ /*定义右边进入动画动画'moverup*/
+@-webkit-keyframes 'moveup' {
+  from{
+	   -webkit-transform: translate(0,600px);
+	   opacity: 0;
+     }
+  to {
+	 -webkit-transform: translate(0px,0);
+	 opacity: 1;
+  }
+}
+
+ /*定义右边进入动画动画'moverdown*/
+@-webkit-keyframes 'movedown' {
+  from{
+	   -webkit-transform: translate(0,-600px);
+     }
+  to {
+	 -webkit-transform: translate(0px,0);
+  }
+}
+
+.moveup{-webkit-animation: moveup 1s 1 ease-in-out;}
+.movedown{-webkit-animation: movedown 2s 1;}
+
+.yy1{text-shadow:-1px 1px 0px #fff;}
+.yy2{text-shadow: 1px 1px 4px #ff0000;}
+.yy3{text-shadow: 2px 3px 4px #ff0000;}
+.yy4 {text-shadow: 0px 0px 3px #FF0, 0px 0px 3px #fff;}
+.yy5 {color: transparent;text-shadow:0 0 1px #F00, 0px -1px  #FFF, 1px 0px  #444;}
+.yy6{text-shadow: 0px 0px #FFF;}
+.yy7{text-shadow:0px 0px 1px #922e09,-1px -1px #ffb69a,0px 0px #922e09;}
+
+ .denglong {	 
+	  -webkit-animation-name: 'round'; /*动画名称*/
+      -webkit-animation-duration: 1s;/*播放一次所持续时间*/
+      -webkit-animation-timing-function: linear;/*动画播放频率*/
+      -webkit-animation-iteration-count: infinite;/*动画播放次涒为无限次*/
+	   -webkit-transform-origin: 50px 0;
+  }
+</style>
+
+</head>
+
+<body>
+<div class="container">
+<div  style="margin:-10px 0 0 15px; left:-10px; position:absolute; top:0px; z-index:21;"><img src="https://img.alicdn.com/imgextra/i3/815440245/TB2yXXmjpXXXXcPXXXXXXXXXXXX_!!815440245.gif" width="75%" class="denglong" /></div>
+<div  style="margin:-10px 15px 0 0; right:-15px;position:absolute; top:0px; z-index:22;"><img src="https://img.alicdn.com/imgextra/i2/815440245/TB29CtxjpXXXXaKXXXXXXXXXXXX_!!815440245.gif" width="75%" class="denglong" /></div>
+
+  <div id="piaoluo">
+    <img src="https://img.alicdn.com/imgextra/i1/815440245/TB2GtNlgVXXXXbSXXXXXXXXXXXX_!!815440245.png" style='position:absolute;top:-100px;left:200px;width:30px;-webkit-animation:piaoluo 10s linear 2s infinite'>
+	<img src="https://img.alicdn.com/imgextra/i3/815440245/TB2s1pkgVXXXXcEXXXXXXXXXXXX_!!815440245.png" style='position:absolute;top:-100px;left:300px;width:40px;-webkit-animation:piaoluo 10s linear 3.5s infinite'>
+	<img src="https://img.alicdn.com/imgextra/i2/815440245/TB27lpcgVXXXXahXpXXXXXXXXXX_!!815440245.png" style='position:absolute;top:-100px;left:400px;width:30px;-webkit-animation:piaoluo 10s linear 7.5s infinite'>
+	<img src="https://img.alicdn.com/imgextra/i2/815440245/TB2k.c4gFXXXXbFXpXXXXXXXXXX_!!815440245.png" style='position:absolute;top:-100px;left:500px;width:40px;-webkit-animation:piaoluo 10s linear 5s infinite'>
+    </div>
+
+<p class="pt10"></p>
+<!--<div id="today" style="font-size:16px;color:#0F9" class="lh18em" >
+  <script type="text/javascript">
+function today_now(){
+	window.setTimeout("today_now()", 1000); 
+	mydate=new Date(); 
+	mymonth=mydate.getMonth()+1; 
+	myday= mydate.getDate(); 
+	myyear= mydate.getYear(); 
+	var hour = mydate.getHours();
+	var minute = mydate.getMinutes();
+	var second = mydate.getSeconds();
+	year=(myyear > 200) ? myyear : 1900 + myyear; 
+	document.getElementById("today").innerHTML="※现在是"+year+"年"+mymonth+"月"+myday+"日 "+hour+":"+minute+":"+second+"※";
+}
+today_now();
+</script>
+</div>-->
+<div align="center"><span  style="color:#6F6; font-size:20px; line-height:24px;" >
+<SCRIPT language=javascript>
+	<!--
+	var isnMonths=new initArray("1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月");
+	var isnDays=new initArray("SUN","MON","TUE","WED","THU","FRI","SAT","SUN");
+	today=new Date();
+
+	function initArray()
+	{
+	  for(i=0;i<initArray.arguments.length;i++)
+	  this[i]=initArray.arguments[i];
+	}
+
+	function getFullYear(d)
+	{//d is a date object
+	yr = d.getYear();
+	if(yr<1000)	yr += 1900;
+	return yr;
+	}
+	//document.write(getFullYear(today) +"年" + isnMonths[today.getMonth()] + "" + today.getDate()+"日");
+	//-->
+	</SCRIPT>
+       <!--倒计时开始 -->&nbsp;
+    <SCRIPT language=JavaScript>
+var urodz= new Date("02/08/2016");
+var s="";
+var now = new Date();
+var ile = urodz.getTime() - now.getTime();
+var dni = Math.ceil(ile / (1000 * 60 * 60 * 24));
+if (dni > 0)
+document.write("<img src='http://gd3.alicdn.com/imgextra/i3/815440245/TB2j_mFbpXXXXXvXXXXXXXXXXXX-815440245.png' width='24' height='24'>"+s+"还有<span class='red fz12em'>"+dni +"</span>天就过年了")
+else if (dni == 0)
+document.write("春节到！")
+else
+document.write("猴年春节快乐！");
+</SCRIPT><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2j_mFbpXXXXXvXXXXXXXXXXXX-815440245.png" width="24" height="24"></span></div>
+
+<!--<p><img src="https://img.alicdn.com/imgextra/i4/815440245/TB2cFTwjpXXXXaJXXXXXXXXXXXX_!!815440245.gif" width="80%"  alt="节日" class="updown1"></p>-->
+<p class="movedown"><img src="https://img.alicdn.com/imgextra/i4/815440245/TB2Jby1jpXXXXcOXpXXXXXXXXXX_!!815440245.gif" width="80%" alt="节日" class=" jump"></p>
+
+<p class=" green fz1em"><span style="color:#FF0" class="yy3">☆<span class="fz15em yellow yy2"> <SCRIPT>document.write(lusername)</SCRIPT> </span>☆</span> </p>
+<p class="lh18em red fz1em yy3">&nbsp;第一个祝您</p>
+<p class="pt20"></p>
+<div class="fz85em">
+<IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2GrM9gFXXXXbUXpXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i3/815440245/TB24CxwgVXXXXauXXXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i2/815440245/TB2j_FmgVXXXXbmXXXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i3/815440245/TB2UyXcgVXXXXaNXpXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i3/815440245/TB24RBvgVXXXXaHXXXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2Pw72hpXXXXXEXpXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i3/815440245/TB24CxwgVXXXXauXXXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2GrM9gFXXXXbUXpXXXXXXXXXX_!!815440245.png"/><br>
+<IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2j7VcgVXXXXaSXpXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2j7VcgVXXXXaSXpXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2j7VcgVXXXXaSXpXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2j7VcgVXXXXaSXpXXXXXXXXXX_!!815440245.png"/><br>
+<p class="fz12em"><img src="https://img.alicdn.com/imgextra/i1/815440245/TB2K.BvgVXXXXadXXXXXXXXXXXX_!!815440245.png" width="23" height="23">((((<span style="color:#09F">春<span class="fz12em">节</span></span><span class="green"><span class="fz12em">快</span>乐</span>))))<img src="https://img.alicdn.com/imgextra/i1/815440245/TB2K.BvgVXXXXadXXXXXXXXXXXX_!!815440245.png" alt="" width="23" height="23"></p>
+<IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2.j8ngVXXXXb1XXXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2.j8ngVXXXXb1XXXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2.j8ngVXXXXb1XXXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2.j8ngVXXXXb1XXXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2.j8ngVXXXXb1XXXXXXXXXXXX_!!815440245.png" alt=""/><br>
+<p class="fz12em"><em><IMG src="https://img.alicdn.com/imgextra/i3/815440245/TB2SYA7gFXXXXbLXpXXXXXXXXXX_!!815440245.png"/><span class="yellow">好</span><span class="orange fz13em">运</span><span class="red">来</span><IMG src="https://img.alicdn.com/imgextra/i3/815440245/TB2SYA7gFXXXXbLXpXXXXXXXXXX_!!815440245.png" alt=""/></em></p>
+<p class="fz1em red">
+财源滚滚<IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2SG.3gFXXXXb_XpXXXXXXXXXX_!!815440245.png"/><IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2SG.3gFXXXXb_XpXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2SG.3gFXXXXb_XpXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i4/815440245/TB2SG.3gFXXXXb_XpXXXXXXXXXX_!!815440245.png" alt=""/>&nbsp;<span class="green"><br>
+平平安安</span><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2iWM8gFXXXXbFXpXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2iWM8gFXXXXbFXpXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2iWM8gFXXXXbFXpXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i1/815440245/TB2iWM8gFXXXXbFXpXXXXXXXXXX_!!815440245.png" alt=""/><span style="color:#F06"><br>
+心想事成</span><IMG src="https://img.alicdn.com/imgextra/i2/815440245/TB2IE8AgVXXXXXEXXXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i2/815440245/TB2IE8AgVXXXXXEXXXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i2/815440245/TB2IE8AgVXXXXXEXXXXXXXXXXXX_!!815440245.png" alt=""/><IMG src="https://img.alicdn.com/imgextra/i2/815440245/TB2IE8AgVXXXXXEXXXXXXXXXXXX_!!815440245.png" alt=""/></p>
+</div>
+
+<p ><img src="https://img.alicdn.com/imgextra/i4/815440245/TB2YS2xjpXXXXaiXXXXXXXXXXXX_!!815440245.gif" width="90%" alt="" cass=""></p>
+<p class="fz1em yy4 blue">送您最最最早的祝福，祝您：</p>
+<p class="pt10"></p>
+<!--<p class=" white  fz1em lh18em yy3"><img src="http://gd1.alicdn.com/imgextra/i1/815440245/TB2_tawbpXXXXX5XpXXXXXXXXXX-815440245.png"/><script type="text/javascript">document.write(show_student_time('平安夜', '2015/12/24', 0));</script>天后平安夜平平安安！<img src="http://gd1.alicdn.com/imgextra/i1/815440245/TB2_tawbpXXXXX5XpXXXXXXXXXX-815440245.png"/></p>
+<p class="green fz1em lh18em"><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2N8eybpXXXXXCXpXXXXXXXXXX-815440245.png"/><script type="text/javascript">document.write(show_student_time('圣诞节', '2015/12/25', 0));</script>天后圣诞节快快乐乐！<img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2N8eybpXXXXXCXpXXXXXXXXXX-815440245.png"/></p>
+<p class="red fz1em lh18em"><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB25t1CbpXXXXbqXXXXXXXXXXXX-815440245.png"/><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB25t1CbpXXXXbqXXXXXXXXXXXX-815440245.png"/><script type="text/javascript">document.write(show_student_time('元旦', '2016/01/01', 0));</script>天后元旦快乐！<img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB25t1CbpXXXXbqXXXXXXXXXXXX-815440245.png"/><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB25t1CbpXXXXbqXXXXXXXXXXXX-815440245.png"/></p>
+<p class="lh18em fz1em yy5" style="color:#F60"><img src="http://gd2.alicdn.com/imgextra/i2/815440245/TB2NzmxbpXXXXXVXpXXXXXXXXXX-815440245.gif"/><script type="text/javascript">document.write(show_student_time('小年', '2016/02/01', 0));</script>天后小年快乐！<img src="http://gd2.alicdn.com/imgextra/i2/815440245/TB2NzmxbpXXXXXVXpXXXXXXXXXX-815440245.gif"/></p>-->
+<p class=" pink fz1em lh18em"><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2j_mFbpXXXXXvXXXXXXXXXXXX-815440245.png"/><script type="text/javascript">document.write(show_student_time('除夕', '2016/02/07', 0));</script>天后除夕夜快乐！<img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2j_mFbpXXXXXvXXXXXXXXXXXX-815440245.png"/></p>
+<p class="yellow fz1em lh18em yy3"><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2l_5ybpXXXXXdXpXXXXXXXXXX-815440245.png"/><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2l_5ybpXXXXXdXpXXXXXXXXXX-815440245.png"/><script type="text/javascript">document.write(show_student_time('春节', '2016/02/08', 0));</script>天后春节快乐！<img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2l_5ybpXXXXXdXpXXXXXXXXXX-815440245.png"/><img src="http://gd3.alicdn.com/imgextra/i3/815440245/TB2l_5ybpXXXXXdXpXXXXXXXXXX-815440245.png"/></p>
+<p class="lh18em fz1em" style="color:#F06"><img src="http://gd2.alicdn.com/imgextra/i2/815440245/TB2NzmxbpXXXXXVXpXXXXXXXXXX-815440245.gif"/><script type="text/javascript">document.write(show_student_time('情人节', '2016/02/14', 0));</script>天后情人节快乐！<img src="http://gd2.alicdn.com/imgextra/i2/815440245/TB2NzmxbpXXXXXVXpXXXXXXXXXX-815440245.gif"/></p>
+<p class="blue fz1em lh18em"><img src="http://gd1.alicdn.com/imgextra/i1/815440245/TB2LKaEbpXXXXauXXXXXXXXXXXX-815440245.png"/><script type="text/javascript">document.write(show_student_time('元宵节', '2016/02/22', 0));</script>天后元宵节快乐！<img src="http://gd1.alicdn.com/imgextra/i1/815440245/TB2LKaEbpXXXXauXXXXXXXXXXXX-815440245.png"/></p>
+<p class=" orange fz1em lh18em yy5">祝福我最好的朋友好运连连！</p>
+<!--<p class="lh18em fz1em">祝您2015年里：<span style="color:#FFC">1月好运，</span><span style="color:#FC9">2月吉祥，</span><span style="color:#3CF">3月如意，</span><span style="color:#0F6">
+4月高升，</span><span style="color:#0F3">5月精彩，</span><span style="color:#0F0">6月平安，</span><span style="color:#FC0">7月发财，</span><span style="color:#F30">8月美好，</span><span style="color:#F00">9月愉悦，</span>
+<span style="color:#FF0">10月高兴，</span><span style="color:#F60">11月开心，</span><span style="color:#FF6">12月快乐。</span>
+</p>-->
+
+<p class="pt20"></p>
+<p ><img src="https://img.alicdn.com/imgextra/i2/815440245/TB2OW_ljpXXXXcVXXXXXXXXXXXX_!!815440245.gif" width="90%" class=" moveright1"></p>
+<p class="pt20"></p>
+<p class="fz1em lh18em">
+<span style="color:#F90">愿你2016年<span class=" col_green2 fz13em">365</span>天天天开心，</span><br>
+<span style="color:#FC0"><span class=" col_green fz1em">8760</span>小时时时快乐，</span><br>
+<span style="color:#FF0"><span class=" col_meih fz1em">5256000</span>分分分精彩，</span><br>
+<span style="color:#FF6"><span class=" col_zi fz1em">31536000</span>秒秒秒幸福。</span></p>
+<h1 class="green fz75em taright">--<SCRIPT>document.write(lusername)</SCRIPT></h1>
+
+<div style="position:relative; z-index:100;" >
+<p><img src="https://img.alicdn.com/imgextra/i4/815440245/TB2b8fAiFXXXXa9XpXXXXXXXXXX_!!815440245.gif" width="90%"></p>
+</div>
+<p class="pt20"></p>
+<!--
+<p class="yy1 red">我就不信有人比我祝福得早！</p>
+-->
+
+<p class="pt20"></p>
+<p class="pt20"></p>
+  <div class="contact_form tacenter" style="display:none;">
+  <p class="f_wei col_whi" style="line-height:35px;font-size:15px;"> <span class="col_zi">输</span><span class="col_lan">入</span><span class="col_lan2">您</span><span class="col_green">的</span><span class="col_huang">名</span><span style="color:#F60">字</span>制<span class="col_meih">作</span><span class="col_zi">属</span><span class="col_lan">于</span><span class="col_lan2">自</span><span class="col_green">己</span><span class="col_huang">的</span><span style="color:#F60">个</span>性<span class="col_meih">祝</span><span class="col_zi">福</span></p>
+<div class="pt10"></div>
+
+  </div> 
+    
+    
+<div class="contact_form tacenter" style="display:none;">
+   <form id="newinfo_form" name="newinfo_form" onsubmit="return check(this)">
+  <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tbody><tr>
+    <td><input type="text" value="您的名字" onClick="this.value=''" name="star" id="stra" maxlength="24" speech="" x-webkit-speech="" placeholder="您的名字" ></td>
+  </tr>
+</tbody></table>
+</form>
+  </div>
+
+    <p class="pt20"></p>
+<div class="btnBox" style="top:360px;display:none;">
+<a class="btnPink" id="bj" href="javascript:void(0);" onClick="check()" style="width:81%"><span>提交</span></a></div>
+
+<script src="http://att.569.com/common/js/wxshare2.js"></script>            
+<script type="text/javascript">
+	lday = show_student_time('春节', '2016/02/08', 0);
+  var shareData = {
+    title: lusername+'送给您一个祝福大礼包，请查收！',
+	desc: lusername+'提前给您拜年啦，祝您2016猴年一顺百顺、六六大顺、发大财、行大运、财源滚滚、万事如意！',
+    link1:location.href,
+    imgUrl: 'http://www.3875.com/countdown/imagesx/3875w1_share.jpg'
+  };
+
+</script>
+
+<script type="text/javascript">
+	function objid(name){
+		return document.getElementById(name);
+	}
+	var module_inits = [];
+	function load_init_modules(){
+		for(var i=0; i<module_inits.length; i++){
+			module_inits[i]();
+		}
+	}
+	function call_me(fun){
+		module_inits.push(fun);
+	}
+
+	var ua = navigator.userAgent.toLowerCase();  
+
+	if(ua.match(/MicroMessenger/i) == 'micromessenger'){  
+		wx.ready(load_init_modules);
+	}else{
+		onload = load_init_modules;
+	}
+	
+var music_url = 'http://smp3.569.com/newyear4/hyl4.mp3';
+
+	function on_wx_music_init()
+	{
+		create_music();
+	}
+
+	call_me(on_wx_music_init);
+
+	//音乐播放
+
+	var music_player = new Audio();
+
+	function play_music()
+	{
+	    if(music_url == '')
+	    {
+	        return ;
+	    }
+
+	    music_player.src  = music_url;
+	    music_player.loop = 'loop';
+	    music_player.play();
+	    
+	    if(objid('sound_image'))
+	    {
+	        objid('sound_image').style.webkitAnimation     = "zhuan 1s linear infinite";
+	    }
+	    
+	    bplay = 1;
+	}
+
+	function create_music()
+	{
+	    if(music_url == '')
+	    {
+	        return ;
+	    }
+	    
+	    play_music();
+
+	    sound_div = document.createElement("div");
+	    sound_div.setAttribute("ID", "cardsound");
+	    sound_div.style.cssText = "position:fixed;right:15px;top:25px;z-index:50;visibility:visible;";
+	    sound_div.onclick = switchsound;
+
+	    bg_htm  = "<img id='sound_image' src='https://img.alicdn.com/imgextra/i2/815440245/TB2uuU4gFXXXXcnXpXXXXXXXXXX_!!815440245.png' width='35px' style='-webkit-animation:zhuan 1s linear infinite'>";
+	    txt_htm = "<div id='music_txt' style='color:white;position:absolute;left:-40px;top:30px;width:60px'></div>"
+
+	    sound_div.innerHTML = bg_htm  + txt_htm;
+
+	    document.body.appendChild(sound_div);
+	} 
+
+	var bplay = 0;              
+	
+	function switchsound()
+	{
+	    au = music_player;
+	    ai = objid('sound_image');
+	    if(au.paused)
+	    {
+	        bplay = 1;
+	        au.play();
+	        ai.style.webkitAnimation     = "zhuan 1s linear infinite";
+	        objid("music_txt").innerHTML = "打开";
+	        objid("music_txt").style.visibility = "visible";
+	        setTimeout(function(){objid("music_txt").style.visibility="hidden"}, 2500);
+	    }
+	    else
+	    {
+	        bplay = 0;
+	        au.pause();
+	        ai.style.webkitAnimation     = "";
+	        objid("music_txt").innerHTML = "关闭";
+	        objid("music_txt").style.visibility = "visible";
+	        setTimeout(function(){objid("music_txt").style.visibility="hidden"}, 2500);
+	    }
+	}
+</script>
+<div class="pb30"></div>
+<p class="pt20"></p>
+
+<div class="reward_area tc" id="js_reward_area" style="display:none;">
+      <p>
+        <a class="reward_access fz75em lh15em" id='js_reward_link' href="http://www.tqmr.com/jump.html" style="width:40%; text-decoration:none;color:#FFF">赞赏</a>
+    </p>
+    <p class="pt10"></p>
+    <p class="reward_tips fz75em lh18em white"><a href="http://www.tqmr.com/jump.html" style="text-decoration:none;" >觉的好，就打个赏呗</a></p>
+    <div id="js_reward_inner " class="reward_area_inner" style="display:none;">
+        <p class="tips_global reward_user_tips"><a href="javascript:;" id="js_reward_total">188</a>人赞赏</p>
+        <div id="js_reward_list" class="reward_user_list"></div>
+    </div>
+</div>
+
+<p class="pt20"></p>
+<p class="pt20"></p>
+<!--
+<p class="white fz75em" style="font-family:宋体"><a style="color:#fff; text-decoration:none;" href="http://wxlink.569.com/wxlink16.html">更多点这里关注“<span class="green">久久祝福</span>”微信公众账号</a></p> 
+-->
+<p class="pt20"></p>
+<p class="pt20"></p>
+<p class="pt20"></p>
+</div>
+
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=1253699134&web_id=1253699134" language="JavaScript"></script>
+<script src="http://s13.cnzz.com/stat.php?id=3352747&web_id=3352747" language="JavaScript"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?980bdcbd69168694a6d42fafb337f83c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>
