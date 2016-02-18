@@ -1,7 +1,7 @@
 ---
 layout: post
 title: QThread with movetothread
-category: 技术
+category: QT
 tags: QT
 keywords: 
 description: 

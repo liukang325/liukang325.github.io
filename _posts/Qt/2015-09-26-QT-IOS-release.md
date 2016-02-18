@@ -1,7 +1,7 @@
 ---
 layout: post
 title: QT 5.2.1如何编译发布IOS程序
-category: 技术
+category: QT
 tags: QT
 keywords: 
 description: 

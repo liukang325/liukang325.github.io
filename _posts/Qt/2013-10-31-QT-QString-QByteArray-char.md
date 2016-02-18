@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Qt中QString,char,int,QByteArray之间的转换
-category: 技术
+category: QT
 tags: QT
 keywords: 
 description: 
