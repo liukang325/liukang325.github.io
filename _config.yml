@@ -1,6 +1,6 @@
 permalink: /:year/:month/:day/:title.html
 paginate: 10
-markdown: kedcarpet
+# markdown: kedcarpet
 
 # 作者信息
 author: 
