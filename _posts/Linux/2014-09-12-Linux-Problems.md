@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux 0：实际问题
-category: Linux
+category: LINUX
 tags: Linux
 keywords: 
 description: 

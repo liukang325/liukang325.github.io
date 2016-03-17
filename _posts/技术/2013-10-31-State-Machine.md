@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 状态机编程技巧：状态表与函数表
-category: 技术
+category: C＋＋
 tags: 设计模式
 keywords: 
 description: 

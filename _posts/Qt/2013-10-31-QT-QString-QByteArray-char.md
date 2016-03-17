@@ -2,7 +2,7 @@
 layout: post
 title: Qt中QString,char,int,QByteArray之间的转换
 category: QT
-tags: QT
+tags: Qt
 keywords: 
 description: 
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: QThread with movetothread
 category: QT
-tags: QT
+tags: Qt
 keywords: 
 description: 
 ---
