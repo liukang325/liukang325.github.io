@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux下用sed和grep命令替换
-category: Linux
+category: LINUX
 tags: Linux
 keywords: 
 description: 

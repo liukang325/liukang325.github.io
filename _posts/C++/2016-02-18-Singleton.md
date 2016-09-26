@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 简单的单身模式(Singleton)
-category: 技术
+category: C＋＋
 tags: 设计模式
 keywords: 
 description: 

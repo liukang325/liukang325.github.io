@@ -1,6 +1,6 @@
 permalink: /:year/:month/:day/:title.html
 paginate: 10
-# markdown: redcarpet
+# markdown: kedcarpet
 
 # 作者信息
 author: 
@@ -36,7 +36,7 @@ active: 技术
 
 # 首页除了最新文章外显示分类
 cates: 
-  - QT
+  - Qt
   - 生活
 
 # 中文本地化
