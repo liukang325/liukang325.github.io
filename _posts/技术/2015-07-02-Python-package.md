@@ -7,7 +7,7 @@ keywords:
 description: 
 ---
 
-###步骤一：建立一个文件夹filePackage
+### 步骤一：建立一个文件夹filePackage
 
 在filePackage 文件夹内创建 \__init__.py 
 
@@ -55,7 +55,7 @@ from file import MyFile
 然后 外面的引用 不用找到具体的现实位置，找到包的\__init__ 就好了
 
 ----------
-###步骤二：建立main.py 和 filePackage 平级
+### 步骤二：建立main.py 和 filePackage 平级
 
 main.py 代码如下：
 
@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
 ----------
 
-###步骤三
+### 步骤三
 
 若 \__init__.py  里什么也不写，那么在main.py里也可以这样写：
 
