@@ -13,10 +13,10 @@ description:
 
 1) Show all the commits at the tips of your commit graph which are no longer referenced from any branch or tag – every lost commit, including every stash commit you’ve ever created, will be somewhere in that graph. 
 
- **git fsck –no-reflog **
+ **git fsck –no-reflog**
 
 
-2)  **git show ** 
+2)  **git show** 
 
 
 3)  **git branch recovered-branch** 
