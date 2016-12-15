@@ -11,7 +11,7 @@ markdown写完后不是立即可见，所以每次写完文章都要经过在线
 
 下面介绍在Windows环境下搭建本地jakyll服务器:
 
-###步骤：
+### 步骤：
 
 1. 下载RubyInstaller, 安装开始的时候，有三个多选按钮，都勾上, path等环境变量都会自动加到系统
 2. 下载DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe, 进入Devkit解压的目录
@@ -164,9 +164,8 @@ Configuration file: f:/GitHub/liukang325.github.io/_config.yml
 ```
 成功就会提示 可以访问 http://127.0.0.1:4000
 
+### 工具
 
-
-###工具
 【1】[RubyInstaller下载地址](https://http://rubyinstaller.org/downloads/)
 
 【2】[MarkDown格式免费在线编辑](http://maxiang.info/)
