@@ -1,0 +1,228 @@
+---
+layout: default
+---
+
+<script src="https://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<style>
+ul {
+	margin:0;
+	padding:0;
+}
+.clear {
+	clear:both;
+}
+.swiper_Mycontainer {
+	position:relative;
+	margin:0 auto;
+}
+.swiper_Mywrapper {
+	margin:0 auto;
+	padding:0;
+	overflow:hidden;
+}
+.swiper_Myslide {
+	margin:0 auto;
+	padding:0;
+	position:relative;
+	overflow:hidden;
+}
+.swiper_Myslide li {
+	float:left;
+	position:relative;
+	overflow:hidden;
+}
+.swiper_Myslide li img {
+	width:100%;
+    height:100%;
+}
+.clear2:after {
+	content:"";
+	clear:both;
+	display:block;
+}
+.swiper_buttton {
+	position:absolute;
+	top:50%;
+	margin-top:-15px;
+	cursor:pointer;
+	text-align:center;
+	max-width:5%;
+	display:none;
+}
+.swiper_but_prev {
+	left:2%;
+	font-size: 30px
+}
+.swiper_but_next {
+	right:2%;
+	font-size: 30px
+}
+.swiper_Mycontainer:hover .swiper_buttton {
+	display:block;
+}
+.uldian {
+	position:absolute;
+	left:0;
+	width:100%;
+	text-align:center;
+	bottom:2%;
+}
+.uldian li {
+	height:10px;
+	width:10px;
+	border-radius:100px;
+	background-color:#000;
+	display:inline-block;
+	margin:0 5px;
+	cursor:pointer;
+}
+.uldian li.cur {
+	background-color:#FFF;
+}
+.demopage{
+    margin-top: 50px;
+    margin-bottom: -90px;
+    width: 100%;
+}
+</style>
+
+<div class="demopage" demo>
+    <div class="swiper_Mycontainer">
+	    <div class="swiper_Mywrapper">
+	        <ul class="swiper_Myslide clear2">
+	            <li><img src="https://liukang325.github.io/images/others/00.jpg"></li>
+	            <li><img src="https://liukang325.github.io/images/others/01.jpg"></li>
+	            <li><img src="https://liukang325.github.io/images/others/02.jpg"></li>
+	            <li><img src="https://liukang325.github.io/images/others/03.jpg"></li>
+	            <li><img src="https://liukang325.github.io/images/others/04.jpg"></li>
+                <li><img src="https://liukang325.github.io/images/others/05.jpg"></li>
+                <li><img src="https://liukang325.github.io/images/others/06.jpg"></li>
+                <li><img src="https://liukang325.github.io/images/others/07.png"></li>
+	        </ul>
+	    </div>
+
+	    <div class="swiper_but_prev swiper_buttton">&lt;</div>
+	    <div class="swiper_but_next swiper_buttton">&gt;</div>
+	    <ul class="uldian"></ul>
+	</div>
+</div>
+
+
+<script>
+$(document).ready(function() {
+    $('.swiper_Myslide li').each(function() {
+        var ff = $(this).text();
+        var index = $(this).index();
+        $('.uldian').append("<li></li>");
+    });
+});
+
+$(document).ready(function() {
+    $('.swiper_Myslide li').width($(window).width());
+    time = 3000;
+    slide_Time = 500;
+    int = self.setInterval("clock()", time);
+    ulLen = $('.swiper_Myslide li').length;
+    ulLiWitd = $('.swiper_Myslide li').outerWidth();
+    ulWith = $('.swiper_Myslide li').length * ulLiWitd;
+    ulWiths = ulWith * 3;
+    $('.swiper_Myslide').width(ulWiths);
+    ulLeft = -ulWith;
+    ulJidian = -ulWith * 2;
+    index = ulLen;
+
+    $(".swiper_Myslide").animate({
+        left: -ulWith
+    }, 0);
+    $('.swiper_Myslide li:lt(' + ulLen + ')').clone(true).prependTo(".swiper_Myslide").appendTo(".swiper_Myslide");
+    $('.swiper_Myslide li:lt(' + ulLen + ')').clone(true).appendTo(".swiper_Myslide");
+    $('.swiper_Myslide li:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+    $('.uldian li:first').addClass('cur').siblings().removeClass('cur');
+});
+
+function clock() {
+    ulLeft = ulLeft - ulLiWitd;
+    index += 1;
+    $(".swiper_Myslide").animate({
+        left: ulLeft
+    }, slide_Time, function() {
+        if (ulLeft == ulJidian) {
+            $('.swiper_Myslide li:lt(' + ulLen + ')').remove().clone(true).appendTo(".swiper_Myslide");
+            $(".swiper_Myslide").animate({
+                left: -ulWith
+            }, 0);
+            ulLeft = -ulWith;
+            index = ulLen;
+        }
+        $('.swiper_Myslide li:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+        indexs = index - ulLen;
+        $('.uldian li:eq(' + indexs + ')').addClass('cur').siblings().removeClass('cur');
+    });
+}
+$(document).ready(function() {
+    $('.swiper_but_next').click(function() {
+        ulLeft = ulLeft - ulLiWitd;
+        index += 1;
+        indexs = index - ulLen;
+        $('.uldian li:eq(' + indexs + ')').addClass('cur').siblings().removeClass('cur');
+        $('.swiper_Myslide').stop().animate({
+            left: ulLeft
+        }, slide_Time, function() {
+            $('.swiper_Myslide li:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+        });
+        if (ulLeft == ulJidian) {
+            $('.swiper_Myslide li:lt(' + ulLen + ')').remove().clone(true).appendTo(".swiper_Myslide");
+            $(".swiper_Myslide").animate({
+                left: -ulWith
+            }, 0);
+            ulLeft = -ulWith;
+            index = ulLen;
+        }
+        clearInterval(int);
+        int = setInterval(clock, time);
+    });
+});
+$(document).ready(function() {
+    $('.swiper_but_prev').click(function() {
+        ulLeft += ulLiWitd;
+        index -= 1;
+        indexs = index - ulLen;
+        $('.uldian li:eq(' + indexs + ')').addClass('cur').siblings().removeClass('cur');
+        $('.swiper_Myslide').stop().animate({
+            left: ulLeft
+        }, slide_Time, function() {
+            $('.swiper_Myslide li:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+        });
+        if (ulLeft == 0) {
+            $('.swiper_Myslide li:lt(' + ulLen + ')').remove().clone(true).appendTo(".swiper_Myslide");
+            $(".swiper_Myslide").animate({
+                left: -ulWith
+            }, 0);
+            ulLeft = -ulWith;
+            index = ulLen;
+        }
+        clearInterval(int);
+        int = setInterval(clock, time);
+    });
+});
+$(document).ready(function() {
+    $('.uldian li').hover(function() {
+        $(this).addClass('cur').siblings().removeClass('cur');
+        var liSu = $(this).index();
+        index = liSu + ulLen;
+        ulLeft = -(ulWith + liSu * ulLiWitd);
+        $('.swiper_Myslide').stop().animate({
+            left: ulLeft
+        }, slide_Time, function() {
+            $('.swiper_Myslide li:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+        });
+        clearInterval(int);
+    }, function() {
+        int = setInterval(clock, time);
+    });
+});
+$(document).ready(function() {
+    var swi_butHei = $('.swiper_buttton').height() / 2;
+    $('.swiper_buttton').css('margin-top', -swi_butHei);
+});
+</script>

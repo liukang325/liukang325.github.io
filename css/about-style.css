@@ -1,0 +1,53 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.about-image{
+	width: 100%;
+}
+.container{margin: 0 auto; max-width: 1000px;}
+.row{width: 100%; float: left; margin-left: auto; margin-right: auto; margin-top: 60px;}
+/*= common css to all effects =*/
+.single-member{
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset;;
+	-o-box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset;;
+	height:350px;width: 280px; 
+	float: left; margin: 15px 2.5%; 
+	/*background-color: #1F1F1F;*/
+	text-align: center; position: relative;}
+.single-member:hover {
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset,0 0 15px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset,0 0 15px rgba(0,0,0,0.8);
+	-o-box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset,0 0 15px rgba(0,0,0,0.8);}
+.member-image img{max-width: 100px; max-height: 100px; vertical-align: middle;}
+.single-member .about-h3 {/*color:#ccc;*/font-size: 24px; font-weight: normal; margin: 10px 0 0; text-transform: uppercase;}
+.single-member .about-h5 {/*color:#ccc;*/font-size: 16px; font-weight: normal; margin: 0 0 15px; line-height: 22px;}
+.single-member .about-p {font-family: '微软雅黑';color:#585858;font-size: 13px; font-weight: normal; line-height: 25px; margin: 0px auto; padding: 0 20px;text-align: left;}
+.single-member .about-p .about-a {color: #4d6dad;text-decoration: none; }
+.single-member .about-p .about-a:hover {color: #223253;text-decoration: none;}
+/*= common css to all effects end =*/
+
+/*= effect-1 css =*/
+.effect-1{border-radius: 5px 5px 5px 5px; margin-bottom: 60px; padding-bottom: 40px;/*background-color: #673AB7;*//*rgb(225, 49, 87);*/}
+.effect-1 .member-image {border: 2px solid #fff; border-radius: 100%; display: inline-block; margin-top: -50px; overflow: hidden; transition: 0.3s;}
+/*= effect-1 css end =*/
+
+/*= effect-2 css =*/
+.effect-2{border-radius: 5px 5px 5px 5px; margin-bottom: 60px; padding-bottom: 40px;/*background-color: #673AB7;*//*rgb(229, 100, 43);*/}
+.effect-2 .member-image {border: 2px solid #fff; border-radius: 100%; display: inline-block; margin-top: -50px; overflow: hidden; transition: 0.3s;}
+/*= effect-2 css end =*/
+
+/*= effect-3 css =*/
+.effect-3{border-radius: 5px 5px 5px 5px; margin-bottom: 60px; padding-bottom: 40px;/*background-color: #673AB7;*//*rgb(31, 181, 84);*/}
+.effect-3 .member-image {border: 2px solid #fff; border-radius: 100%; display: inline-block; margin-top: -50px; overflow: hidden; transition: 0.3s;}
+/*= effect-3 css end =*/
+
+
+/*= Media Query 
+=============== */
+@media screen and (max-width: 1200px)
+{
+	.row{width: 100%; margin-top: 60px;}
+	.team-members{text-align: center;}
+	.single-member{float: none; display: inline-block; vertical-align: bottom;}
+}
+/*= Media Query End
+=================== */

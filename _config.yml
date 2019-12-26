@@ -1,47 +1,56 @@
-permalink: /:year/:month/:day/:title.html
-paginate: 10
-# markdown: kedcarpet
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# 作者信息
-author: 
-  name: Liu Kang
-  email: liukang325@qq.com
-  link: http://lk.link-pub.cn
-  weibo: http://weibo.com/234100789
-  github: http://github.com/liukang325
-  music: 
-  linkedin: 
+# Site settings
+title: Hello，阳光柠檬！
+brief-intro: 养成记录笔记的好习惯
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://liukang325.github.io" # the base hostname & protocol for your site
 
-# 站点信息
-title: 阳光柠檬的博客
-description: My personal blog
-url: lk.link-pub.cn
-rss_url: /pages/atom.xml
+permalink: /:year/:month/:day/:title/
 
-# gavatar头像及Favicon
-gavatar: /public/img/me.jpg
-favicon: /public/img/me.jpg
+# other links
+github_username:  liukang325
+email: liukang325@qq.com
+weibo_username: liukang325
+zhihu_username: liukang325
 
-# google analytics 设置
-ga:
-  id: UA-54262064-1 
-  url: lk.link-pub.cn
+description_footer:
 
-# disqus 设置
-disqus:
-  shortname: liukang325
+#gitment
+comment_gitment_repo: liukang325.github.io
+comment_gitment_clientId: 
+comment_gitment_clientSecret: 
 
-# 主题设置，自动激活某个标签
-active: 技术
 
-# 首页除了最新文章外显示分类
-cates: 
-  - Qt
-  - 生活
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+# baidu_tongji_id: e5a35e62751b1f5305cfc174a374fd4d
+# google_analytics_id: UA-116772911-1 # google 分析追踪id
 
-# 中文本地化
-locals:
-  tags: 标签
-  about: 关于
-  newest: 最新文章
-  archive: 归档
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 6

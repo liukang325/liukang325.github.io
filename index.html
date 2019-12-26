@@ -1,47 +1,203 @@
 ---
-layout: page_title
-title: <i class="fa fa-home fa-lg"></i>
-titlename: 首页
+layout: default
 ---
-<div style="display:none;">
-  <center>
-    <a href="/html/newYear.html" title="2016新春祝福" style=" color:#FF0000; font-size:48px;">2016新春祝福</a>
-  </center>
-</div>
-<!--<br>--> 
-<center><h3><font color="#000080">不</font><font color="#FFA500">念</font><font color="#2E8B57">过</font><font color="#F08080">往，</font><font color="#00CED1">不</font><font color="red">畏</font><font color="#BA55D3">将</font><font color="#601986">来</h3></center>
-<div class="row">
-  <div class="col-md-12">
-    <div class="panel panel-primary">
-      <div class="panel-heading">{{ site.locals.newest }}</div>
-      {% for post in paginator.posts %}
-        <a  href='{{ post.url }}' class="list-group-item pjaxlink clearfix">
-          {{post.title}}
-          <span class="badge">{{ post.date | date:"%Y年%m月%d日" }}</span>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-  {% for cate in site.cates %}
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">{{ cate }}</div>
-        {% for tag in site.tags %} 
-          {% if tag[0] == cate %}
-            {% for post in tag[1] %}
-              <a  href='{{ post.url }}' class="list-group-item pjaxlink clearfix">
-                {{post.title}}
-                <span class="badge">{{ post.date | date:"%Y年%m月%d日" }}</span>
-              </a>
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  {% endfor %}
-  <div style="display:none;">
-    <a href="/html/html5.html" title="HTML5学习">HTML5学习</a>
-  </div>
 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/img-change.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/koala.min.1.5.js"></script><!-- 图像播放 -->
+<script type="text/javascript" src="js/jquery-1.11.1jquery.js"></script><!-- 隐藏按钮 -->
+<script type="text/javascript">
+$(document).ready(function(){
+  $(id="#fsD1").mouseover(function(){
+    $(".prev").show();
+	$(".next").show();
+  });
+  $(id="#fsD1").mouseout(function(){
+	$(".prev").hide();
+    $(".next").hide();
+  });
+});
+</script>
+</head>
+<div class="page clearfix" index>
+    <div class="left">
+        <h1>Welcome to My Zone!</h1>
+        <small>业精于勤荒于嬉,行成于思毁于随</small>
+        <hr>
+		<!-- 代码 开始 -->
+		<div id="fsD1" class="focus" style="margin-left:0px;margin-top:0px;">  
+			<div id="D1pic1" class="fPic">  
+				<div class="fcon" style="display: none;">
+					<a target="_blank" href="https://blog.csdn.net/liukang325">
+						<img src='/images/index/1.jpg'>
+					</a>
+					<span class="shadow"><a target="_blank" href="https://blog.csdn.net/liukang325">我的CSDN</a></span>
+				</div>
+				
+				<div class="fcon" style="display: none;">
+					<a target="_blank" href="https://github.com/liukang325">
+						<img src='/images/index/2.jpg'>
+					</a>
+					<span class="shadow"><a target="_blank" href="https://github.com/liukang325">我的Github</a></span>
+				</div>
+
+                <div class="fcon" style="display: none;">
+                    <a target="_blank" href="https://liukang325.github.io/demo/">
+                        <img src='/images/index/3.jpg'>
+                    </a>
+                    <span class="shadow"><a target="_blank" href="https://liukang325.github.io/demo">其它页</a></span>
+                </div>
+
+                <div class="fcon" style="display: none;">
+                    <a target="_blank" href="https://liukang325.github.io/about/">
+                        <img src='/images/index/4.jpg'>
+                    </a>
+                    <span class="shadow"><a target="_blank" href="https://liukang325.github.io/about">关于我</a></span>
+                </div>
+			</div>
+			<div class="fbg">  
+			<div class="D1fBt" id="D1fBt">  
+				<a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>1</i></a>  
+				<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>  
+				<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>3</i></a>  
+				<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>  
+			</div>  
+			</div>
+			<span class="prev" hidden=""><img src="/images/LButton.png" /></span>  
+			<span class="next" hidden=""><img src="/images/RButton.png" /></span>    
+		</div>
+		<!-- 简介 -->
+		<div style="width:100%;float:left;">
+			<center>
+			<div style="width:100%;float:left;margin-top:20px;"><img src='/images/logo.png'></div>
+			<p>This site belongs to myself personally.</P>
+			<p>Here is a part of my study and work.</p>
+			<p>I am passionate about C++ and Qt.</p>
+			<p>If you are interested in this, we can discuss together.</p>
+			</center>
+		</div>
+		<!-- end -->
+	</div>
+
+    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
+    <div class="right">
+        <div class="wrap">
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    最近发布
+                </div>
+                <ul class="content-ul" recent>
+                    {% for post in site.posts offset: 0 limit: 10  %}
+                        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="side ">
+                <div>
+                    <i class="fa fa-th-list"></i>
+                    分类
+                </div>
+                <ul class="content-ul" cate>
+                    {% for category in site.categories offset: 0 limit: 15%}
+                    <li>
+                        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
+                            <span class="name">
+                                {{ category | first }}
+                            </span>
+                            <span class="badge">{{ category | last | size }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">
+                <div>
+                    <i class="fa fa-tags"></i>
+                    Tags
+                </div>
+                <div class="tags-cloud">
+                    {% assign first = site.tags.first %}
+                    {% assign max = first[1].size %}
+                    {% assign min = max %}
+                    {% for tag in site.tags offset:1 %}
+                      {% if tag[1].size > max %}
+                        {% assign max = tag[1].size %}
+                      {% elsif tag[1].size < min %}
+                        {% assign min = tag[1].size %}
+                      {% endif %}
+                    {% endfor %}
+
+                    {% if max == min %}
+                        {% assign diff = 1 %}
+                    {% else %}
+                        {% assign diff = max | minus: min %}
+                    {% endif %}
+
+                    {% for tag in site.tags %}
+                      {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
+                      {% assign base = temp | divided_by: 4 %}
+                      {% assign remain = temp | modulo: 4 %}
+                      {% if remain == 0 %}
+                        {% assign size = base | plus: 9 %}
+                      {% elsif remain == 1 or remain == 2 %}
+                        {% assign size = base | plus: 9 | append: '.5' %}
+                      {% else %}
+                        {% assign size = base | plus: 10 %}
+                      {% endif %}
+                      {% if remain == 0 or remain == 1 %}
+                        {% assign color = 9 | minus: base %}
+                      {% else %}
+                        {% assign color = 8 | minus: base %}
+                      {% endif %}
+                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+                    {% endfor %}
+                </div>
+            </div> -->
+
+            <!-- <div class="side">
+                <div>
+                    <i class="fa fa-external-link"></i>
+                    Links
+                </div>
+                <ul  class="content-ul">
+
+                </ul>
+            </div> -->
+        </div>
+    </div>
 </div>
- 
+<!-- <script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+<!-- <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+
+<script type="text/javascript">
+	Qfast.add('widgets', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+	Qfast(false, 'widgets', function () {
+		K.tabs({
+			id: 'fsD1',   //焦点图包裹id  
+			conId: "D1pic1",  //** 大图域包裹id  
+			tabId:"D1fBt",  
+			tabTn:"a",
+			conCn: '.fcon', //** 大图域配置class       
+			auto: 1,   //自动播放 1或0
+			effect: 'fade',   //效果配置
+			eType: 'click', //** 鼠标事件
+			pageBt:true,//是否有按钮切换页码
+			bns: ['.prev', '.next'],//** 前后按钮配置class                          
+			interval: 2000  //** 停顿时间  
+		}) 
+	})  
+</script>
+<!-- 代码 结束 -->
+
+<!--360网站爬取-->
+<script>(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?59e5e73af3f2b75389d6f8382ae6384d":"https://jspassport.ssl.qhimg.com/11.0.1.js?59e5e73af3f2b75389d6f8382ae6384d";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
